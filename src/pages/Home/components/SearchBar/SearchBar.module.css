@@ -1,0 +1,17 @@
+.labelText {
+  font-size: large;
+  margin-right: 0.5rem;
+}
+
+.inputStyle {
+  border-radius: 20px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  width: 40%;
+  justify-self: "center";
+  align-items: center;
+}
+
+.form {
+  align-items: center;
+}

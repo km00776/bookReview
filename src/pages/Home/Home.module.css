@@ -1,0 +1,59 @@
+.container {
+  flex: 1;
+  /* display: flex; */
+}
+.header {
+  text-align: center;
+  /* flex: 1; */
+  flex-direction: column;
+  /* background-color: aqua; */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.title {
+  text-align: center;
+  justify-content: space-between;
+  /* background-color: red; */
+  /* width: 80%; */
+}
+
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Space between the cards */
+  align-items: stretch; /* Ensures all cards stretch to the same height */
+  gap: 1rem; /* Optional: Adds some space between the cards */
+  margin-bottom: 4rem;
+}
+
+.labelText {
+  font-size: large;
+  margin-right: 0.5rem;
+}
+
+.inputStyle {
+  border-radius: 20px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  width: 40%;
+  justify-self: "center";
+  align-items: center;
+}
+
+.form {
+  align-items: center;
+}
+
+@media (min-width: 1280px) {
+  .header {
+    text-align: center;
+    /* flex: 1; */
+    flex-direction: row;
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+}

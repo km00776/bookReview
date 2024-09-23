@@ -1,24 +1,17 @@
-import React, { useEffect, useState } from 'react';
-import './App.css';
+import React from "react";
 
-function App() {
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home/Home";
+import Details from "./pages/Details/Details";
+import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
 
-  const [message, setMessage] = useState('');
-
-  // Fetch the message from the Express API
-  useEffect(() => {
-    fetch('/api/hello')
-      .then((res) => res.json())
-      .then((data) => setMessage(data.message));
-  }, []);
-
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>{message || 'Loading...'}</h1>
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/Details" element={<ProtectedRoute element={Details} />} />
+    </Routes>
   );
-}
+};
 
 export default App;
